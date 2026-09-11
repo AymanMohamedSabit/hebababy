@@ -132,9 +132,17 @@ export default function Home() {
         {/* Glowing Aura Background */}
         <div className="w-full relative flex flex-col items-center justify-center p-5 pt-12 pb-24 text-center overflow-hidden bg-[url('https://www.transparenttextures.com/patterns/rice-paper-2.png')]">
           
-          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[600px] pointer-events-none">
+          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[700px] pointer-events-none z-0">
             <div className={`absolute inset-0 rounded-full blur-[80px] opacity-50 ${theme.primaryBg} scale-125`}></div>
             <div className={`absolute inset-0 rounded-full blur-[60px] opacity-40 ${theme.secondaryBg} scale-90 translate-y-10`}></div>
+            
+            {/* Floating Baby Stickers */}
+            <motion.div animate={{ y: [0, -30, 0], rotate: [0, 15, -15, 0] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }} className="absolute top-[10%] left-[0%] sm:-left-[20%] text-5xl sm:text-7xl opacity-80">🍼</motion.div>
+            <motion.div animate={{ y: [0, 25, 0], rotate: [0, -10, 10, 0] }} transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }} className="absolute top-[5%] right-[0%] sm:-right-[20%] text-6xl sm:text-8xl opacity-80">🧸</motion.div>
+            <motion.div animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }} className="absolute bottom-[20%] left-[5%] sm:-left-[15%] text-5xl sm:text-6xl opacity-70">👣</motion.div>
+            <motion.div animate={{ y: [0, 30, 0], rotate: [0, -15, 15, 0] }} transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }} className="absolute bottom-[10%] right-[5%] sm:-right-[10%] text-6xl sm:text-7xl opacity-80">🎀</motion.div>
+            <motion.div animate={{ y: [0, -25, 0], rotate: [0, 10, -5, 0] }} transition={{ repeat: Infinity, duration: 6.5, ease: "easeInOut" }} className="absolute top-[50%] left-[90%] sm:left-[110%] text-5xl sm:text-6xl opacity-75">🐣</motion.div>
+            <motion.div animate={{ y: [0, 20, 0], rotate: [0, -10, 5, 0] }} transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut" }} className="absolute top-[45%] right-[90%] sm:right-[110%] text-5xl sm:text-6xl opacity-75">👶🏻</motion.div>
           </div>
           
           {/* Quranic Verse at the top */}
@@ -170,12 +178,10 @@ export default function Home() {
           
           {/* Main Titles (Big Names) */}
           <div className="relative z-10 flex flex-col items-center justify-center mb-16">
-            <motion.h1 initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.5 }} className="font-[family-name:var(--font-amiri)] text-7xl sm:text-9xl text-[#4a4a4a] mb-4 sm:mb-6 font-bold drop-shadow-md">هبة أيمن محمد</motion.h1>
+            <motion.h1 initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.5 }} className="font-[family-name:var(--font-amiri)] text-6xl sm:text-8xl text-[#4a4a4a] mb-6 sm:mb-8 font-bold drop-shadow-md text-center">هبة أيمن محمد</motion.h1>
             
-            <motion.div initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.7 }} className={`font-[family-name:var(--font-playfair)] text-3xl sm:text-5xl ${theme.secondaryText} tracking-[6px] sm:tracking-[10px] uppercase font-bold drop-shadow-sm leading-tight mb-8`}>
-              <span className="block sm:inline">HEBA</span>
-              <span className="block sm:inline text-2xl sm:text-5xl sm:mx-4 my-2 sm:my-0">&</span>
-              <span className="block sm:inline">AYMAN</span>
+            <motion.div initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.7 }} className={`font-[family-name:var(--font-playfair)] text-5xl sm:text-7xl ${theme.secondaryText} tracking-[15px] sm:tracking-[25px] uppercase font-bold drop-shadow-sm leading-tight mb-8 text-center`}>
+              HEBA
             </motion.div>
           </div>
 
